@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fantasy Football</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+  <!-- LEFT SIDEBAR -->
+  <div id="sidebar">
+    <h3>Extras & Stats</h3>
+    <ul>
+      <li>Wildcard</li>
+      <li>Swap Player</li>
+      <li>Extra Goal Boost</li>
+    </ul>
+    <div id="team-points">Team Points: 0</div>
+    <h3>Matches</h3>
+    <ul id="matches"></ul>
+    <p id="message" class="feedback"></p>
+    <button id="apply-team-btn">✅ Apply Team</button>
+  </div>
+
+  <!-- PITCH AREA -->
+  <div id="pitch-area">
+    <div id="team-dropzone">
+      <img src="assets/pitch.png" class="pitch-bg">
+
+      <!-- Slots for 4-player formation (Goalie + 1 + 2 Wingers) -->
+      <div class="slot" data-slot="0" style="left:180px; top:220px;"><span class="plus-icon">➕</span></div> <!-- Goalkeeper -->
+      <div class="slot" data-slot="1" style="left:180px; top:120px;"><span class="plus-icon">➕</span></div> <!-- Center -->
+      <div class="slot" data-slot="2" style="left:100px; top:50px;"><span class="plus-icon">➕</span></div> <!-- Left Wing -->
+      <div class="slot" data-slot="3" style="left:260px; top:50px;"><span class="plus-icon">➕</span></div> <!-- Right Wing -->
+    </div>
+  </div>
+</div>
+
+<!-- PLAYER MENU -->
+<div id="team-menu" class="player-menu">
+  <h3>Select Player</h3>
+  <div id="player-options"></div>
+  <button onclick="closePlayerMenu()">Close</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
